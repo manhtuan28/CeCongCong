@@ -76,11 +76,11 @@ int main()
             scanf("%d", &so);
             if (SoNguyenTo(so))
             {
-                printf("%d la so nguyen to.\n", so);
+                printf("--> %d la so nguyen to.\n", so);
             }
             else
             {
-                printf("%d khong phai la so nguyen to.\n", so);
+                printf("--> %d khong phai la so nguyen to.\n", so);
             }
             break;
         case 2:
@@ -88,11 +88,11 @@ int main()
             scanf("%d", &so);
             if (SoChinhPhuong(so))
             {
-                printf("%d la so chinh phuong.\n", so);
+                printf("--> %d la so chinh phuong.\n", so);
             }
             else
             {
-                printf("%d khong phai la so chinh phuong.\n", so);
+                printf("--> %d khong phai la so chinh phuong.\n", so);
             }
             break;
         case 3:
@@ -100,11 +100,11 @@ int main()
             scanf("%d", &so);
             if (SoHoanHao(so))
             {
-                printf("%d la so hoan hao.\n", so);
+                printf("--> %d la so hoan hao.\n", so);
             }
             else
             {
-                printf("%d khong phai la so hoan hao.\n", so);
+                printf("--> %d khong phai la so hoan hao.\n", so);
             }
             break;
         case 4:
@@ -112,18 +112,18 @@ int main()
             scanf("%d", &so);
             if (SoFibonacci(so))
             {
-                printf("%d la so Fibonacci.\n", so);
+                printf("--> %d la so Fibonacci.\n", so);
             }
             else
             {
-                printf("%d khong phai la so Fibonacci.\n", so);
+                printf("-->%d khong phai la so Fibonacci.\n", so);
             }
             break;
         case 0:
             tiepTuc = false;
             break;
         default:
-            printf("Lua chon khong hop le. Vui long chon lai.\n");
+            printf("-->Lua chon khong hop le. Vui long chon lai.\n");
         }
         printf("\n");
     }

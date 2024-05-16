@@ -27,7 +27,7 @@ bool laSoNguyenTo(int n);
 bool laSoChinhPhuong(int n);
 void hoanDoi(int *a, int *b);
 
-// Nhập vào dãy số, hiển thị dãy số đã nhập
+// Nh?p vào dãy s?, hi?n th? dãy s? dã nh?p
 void nhapMang(int arr[], int *n)
 {
     printf("Nhap so phan tu cua mang: ");
@@ -48,7 +48,7 @@ void hienThiMang(int arr[], int n)
     printf("\n");
 }
 
-// Các hàm tính toán cơ bản
+// Các hàm tính toán co b?n
 int tinhTongChan(int arr[], int n)
 {
     int tong = 0;
@@ -77,7 +77,7 @@ float tinhTrungBinhDuong(int arr[], int n)
     return dem == 0 ? 0 : (float)tong / dem;
 }
 
-// Hàm sắp xếp
+// Hàm s?p x?p
 void sapXepTangDan(int arr[], int n)
 {
     for (int i = 0; i < n - 1; i++)
@@ -111,7 +111,7 @@ void sapXepAm0Duong(int arr[], int n)
     int temp[MAX_SIZE];
     int index = 0;
 
-    // Các số âm
+    // Các s? âm
     for (int i = 0; i < n; i++)
     {
         if (arr[i] < 0)
@@ -119,7 +119,7 @@ void sapXepAm0Duong(int arr[], int n)
             temp[index++] = arr[i];
         }
     }
-    // Các số 0
+    // Các s? 0
     for (int i = 0; i < n; i++)
     {
         if (arr[i] == 0)
@@ -127,7 +127,7 @@ void sapXepAm0Duong(int arr[], int n)
             temp[index++] = arr[i];
         }
     }
-    // Các số dương
+    // Các s? duong
     for (int i = 0; i < n; i++)
     {
         if (arr[i] > 0)
@@ -146,7 +146,7 @@ void sapXepNguyenToDau(int arr[], int n)
     int temp[MAX_SIZE];
     int index = 0;
 
-    // Các số nguyên tố
+    // Các s? nguyên t?
     for (int i = 0; i < n; i++)
     {
         if (laSoNguyenTo(arr[i]))
@@ -154,7 +154,7 @@ void sapXepNguyenToDau(int arr[], int n)
             temp[index++] = arr[i];
         }
     }
-    // Các số không phải nguyên tố
+    // Các s? không ph?i nguyên t?
     for (int i = 0; i < n; i++)
     {
         if (!laSoNguyenTo(arr[i]))
@@ -173,7 +173,7 @@ void sapXepChanTruocLeSau(int arr[], int n)
     int temp[MAX_SIZE];
     int index = 0;
 
-    // Các số chẵn
+    // Các s? ch?n
     for (int i = 0; i < n; i++)
     {
         if (arr[i] % 2 == 0)
@@ -181,7 +181,7 @@ void sapXepChanTruocLeSau(int arr[], int n)
             temp[index++] = arr[i];
         }
     }
-    // Các số lẻ
+    // Các s? l?
     for (int i = 0; i < n; i++)
     {
         if (arr[i] % 2 != 0)
@@ -195,7 +195,7 @@ void sapXepChanTruocLeSau(int arr[], int n)
     }
 }
 
-// Giá trị lớn nhất (nhỏ nhất) của dãy số
+// Giá tr? l?n nh?t (nh? nh?t) c?a dãy s?
 int timMax(int arr[], int n)
 {
     int max = arr[0];
@@ -222,7 +222,7 @@ int timMin(int arr[], int n)
     return min;
 }
 
-// Tìm kiếm phần tử xi sao cho tồn tại cặp xj, xk thỏa mãn xi = xj + xk
+// Tìm ki?m ph?n t? xi sao cho t?n t?i c?p xj, xk th?a mãn xi = xj + xk
 bool timXiBangXjCongXk(int arr[], int n)
 {
     for (int i = 0; i < n; i++)
@@ -233,7 +233,7 @@ bool timXiBangXjCongXk(int arr[], int n)
             {
                 if (i != j && i != k && j != k && arr[i] == arr[j] + arr[k])
                 {
-                    printf("Tim thay xi = xj + xk voi xi = %d, xj = %d, xk = %d\n", arr[i], arr[j], arr[k]);
+                    printf("--> Tim thay xi = xj + xk voi xi = %d, xj = %d, xk = %d\n", arr[i], arr[j], arr[k]);
                     return true;
                 }
             }
@@ -242,7 +242,7 @@ bool timXiBangXjCongXk(int arr[], int n)
     return false;
 }
 
-// Đếm phần tử x trong dãy
+// Ð?m ph?n t? x trong dãy
 int demPhanTuX(int arr[], int n, int x, int viTri[])
 {
     int dem = 0;
@@ -256,7 +256,7 @@ int demPhanTuX(int arr[], int n, int x, int viTri[])
     return dem;
 }
 
-// Tìm số nguyên tố trong dãy
+// Tìm s? nguyên t? trong dãy
 bool timSoNguyenTo(int arr[], int n, int viTri[], int *soLuong)
 {
     *soLuong = 0;
@@ -270,7 +270,7 @@ bool timSoNguyenTo(int arr[], int n, int viTri[], int *soLuong)
     return (*soLuong > 0);
 }
 
-// Tìm số chính phương trong dãy
+// Tìm s? chính phuong trong dãy
 bool timSoChinhPhuong(int arr[], int n, int viTri[], int *soLuong)
 {
     *soLuong = 0;
@@ -284,7 +284,7 @@ bool timSoChinhPhuong(int arr[], int n, int viTri[], int *soLuong)
     return (*soLuong > 0);
 }
 
-// Chèn phần tử vào vị trí k
+// Chèn ph?n t? vào v? trí k
 void chenPhanTu(int arr[], int *n, int x, int k)
 {
     if (k >= 0 && k <= *n)
@@ -298,11 +298,11 @@ void chenPhanTu(int arr[], int *n, int x, int k)
     }
     else
     {
-        printf("Vi tri chen khong hop le.\n");
+        printf("--> Vi tri chen khong hop le.\n");
     }
 }
 
-// Xóa phần tử ở vị trí k
+// Xóa ph?n t? ? v? trí k
 void xoaPhanTu(int arr[], int *n, int k)
 {
     if (k >= 0 && k < *n)
@@ -315,11 +315,11 @@ void xoaPhanTu(int arr[], int *n, int k)
     }
     else
     {
-        printf("Vi tri xoa khong hop le.\n");
+        printf("--> Vi tri xoa khong hop le.\n");
     }
 }
 
-// Xóa các phần tử có giá trị giaTri
+// Xóa các ph?n t? có giá tr? giaTri
 void xoaPhanTuGiaTri(int arr[], int *n, int giaTri)
 {
     int i = 0;
@@ -336,7 +336,7 @@ void xoaPhanTuGiaTri(int arr[], int *n, int giaTri)
     }
 }
 
-// Các hàm hỗ trợ
+// Các hàm h? tr?
 bool laSoNguyenTo(int n)
 {
     if (n <= 1)
@@ -394,7 +394,7 @@ int main()
         printf("17. Xoa phan tu o vi tri k\n");
         printf("18. Xoa phan tu co gia tri 0\n");
         printf("19. Xoa phan tu co gia tri le\n");
-        printf("20. Thoat\n");
+        printf("0. Thoat\n");
         printf("Nhap lua chon cua ban: ");
         scanf("%d", &luaChon);
 
@@ -407,53 +407,53 @@ int main()
             hienThiMang(arr, n);
             break;
         case 3:
-            printf("Tong cac so chan: %d\n", tinhTongChan(arr, n));
+            printf("--> Tong cac so chan: %d\n", tinhTongChan(arr, n));
             break;
         case 4:
-            printf("Trung binh cong cac so duong: %.2f\n", tinhTrungBinhDuong(arr, n));
+            printf("--> Trung binh cong cac so duong: %.2f\n", tinhTrungBinhDuong(arr, n));
             break;
         case 5:
             sapXepTangDan(arr, n);
-            printf("Day so sau khi sap xep tang dan: ");
+            printf("--> Day so sau khi sap xep tang dan: ");
             hienThiMang(arr, n);
             break;
         case 6:
             sapXepGiamDan(arr, n);
-            printf("Day so sau khi sap xep giam dan: ");
+            printf("--> Day so sau khi sap xep giam dan: ");
             hienThiMang(arr, n);
             break;
         case 7:
             sapXepAm0Duong(arr, n);
-            printf("Day so sau khi sap xep am, 0, duong: ");
+            printf("--> Day so sau khi sap xep am, 0, duong: ");
             hienThiMang(arr, n);
             break;
         case 8:
             sapXepNguyenToDau(arr, n);
-            printf("Day so sau khi sap xep so nguyen to ve dau: ");
+            printf("--> Day so sau khi sap xep so nguyen to ve dau: ");
             hienThiMang(arr, n);
             break;
         case 9:
             sapXepChanTruocLeSau(arr, n);
-            printf("Day so sau khi sap xep so chan truoc, so le sau: ");
+            printf("--> Day so sau khi sap xep so chan truoc, so le sau: ");
             hienThiMang(arr, n);
             break;
         case 10:
-            printf("Gia tri lon nhat: %d\n", timMax(arr, n));
+            printf("--> Gia tri lon nhat: %d\n", timMax(arr, n));
             break;
         case 11:
-            printf("Gia tri nho nhat: %d\n", timMin(arr, n));
+            printf("--> Gia tri nho nhat: %d\n", timMin(arr, n));
             break;
         case 12:
             if (!timXiBangXjCongXk(arr, n))
             {
-                printf("Khong tim thay xi thoa man xi = xj + xk\n");
+                printf("--> Khong tim thay xi thoa man xi = xj + xk\n");
             }
             break;
         case 13:
             printf("Nhap gia tri x: ");
             scanf("%d", &x);
             soLuong = demPhanTuX(arr, n, x, viTri);
-            printf("Gia tri %d xuat hien %d lan tai cac vi tri: ", x, soLuong);
+            printf("--> Gia tri %d xuat hien %d lan tai cac vi tri: ", x, soLuong);
             for (int i = 0; i < soLuong; i++)
             {
                 printf("%d ", viTri[i]);
@@ -463,7 +463,7 @@ int main()
         case 14:
             if (timSoNguyenTo(arr, n, viTri, &soLuong))
             {
-                printf("So nguyen to xuat hien %d lan tai cac vi tri: ", soLuong);
+                printf("--> So nguyen to xuat hien %d lan tai cac vi tri: ", soLuong);
                 for (int i = 0; i < soLuong; i++)
                 {
                     printf("%d ", viTri[i]);
@@ -472,13 +472,13 @@ int main()
             }
             else
             {
-                printf("Khong co so nguyen to trong day\n");
+                printf("--> Khong co so nguyen to trong day\n");
             }
             break;
         case 15:
             if (timSoChinhPhuong(arr, n, viTri, &soLuong))
             {
-                printf("So chinh phuong xuat hien %d lan tai cac vi tri: ", soLuong);
+                printf("--> So chinh phuong xuat hien %d lan tai cac vi tri: ", soLuong);
                 for (int i = 0; i < soLuong; i++)
                 {
                     printf("%d ", viTri[i]);
@@ -487,7 +487,7 @@ int main()
             }
             else
             {
-                printf("Khong co so chinh phuong trong day\n");
+                printf("--> Khong co so chinh phuong trong day\n");
             }
             break;
         case 16:
@@ -496,19 +496,19 @@ int main()
             printf("Nhap vi tri chen: ");
             scanf("%d", &k);
             chenPhanTu(arr, &n, x, k);
-            printf("Day so sau khi chen: ");
+            printf("--> Day so sau khi chen: ");
             hienThiMang(arr, n);
             break;
         case 17:
             printf("Nhap vi tri can xoa: ");
             scanf("%d", &k);
             xoaPhanTu(arr, &n, k);
-            printf("Day so sau khi xoa: ");
+            printf("--> Day so sau khi xoa: ");
             hienThiMang(arr, n);
             break;
         case 18:
             xoaPhanTuGiaTri(arr, &n, 0);
-            printf("Day so sau khi xoa cac phan tu co gia tri 0: ");
+            printf("--> Day so sau khi xoa cac phan tu co gia tri 0: ");
             hienThiMang(arr, n);
             break;
         case 19:
@@ -520,14 +520,14 @@ int main()
                     i--;
                 }
             }
-            printf("Day so sau khi xoa cac phan tu le: ");
+            printf("--> Day so sau khi xoa cac phan tu le: ");
             hienThiMang(arr, n);
             break;
-        case 20:
+        case 0:
             tiepTuc = false;
             break;
         default:
-            printf("Lua chon khong hop le. Vui long chon lai.\n");
+            printf("--> Lua chon khong hop le. Vui long chon lai.\n");
         }
         printf("\n");
     }
