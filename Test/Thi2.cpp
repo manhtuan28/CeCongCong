@@ -27,7 +27,7 @@ bool laSoNguyenTo(int n);
 bool laSoChinhPhuong(int n);
 void hoanDoi(int *a, int *b);
 
-// Nh?p vào dãy s?, hi?n th? dãy s? dã nh?p
+// Nhap vao day so, hien thi day so
 void nhapMang(int arr[], int *n)
 {
     printf("Nhap so phan tu cua mang: ");
@@ -48,7 +48,7 @@ void hienThiMang(int arr[], int n)
     printf("\n");
 }
 
-// Các hàm tính toán co b?n
+// Cac ham tinh toan co ban
 int tinhTongChan(int arr[], int n)
 {
     int tong = 0;
@@ -77,7 +77,7 @@ float tinhTrungBinhDuong(int arr[], int n)
     return dem == 0 ? 0 : (float)tong / dem;
 }
 
-// Hàm s?p x?p
+// Ham sap xep
 void sapXepTangDan(int arr[], int n)
 {
     for (int i = 0; i < n - 1; i++)
@@ -111,7 +111,7 @@ void sapXepAm0Duong(int arr[], int n)
     int temp[MAX_SIZE];
     int index = 0;
 
-    // Các s? âm
+    // Cac so am
     for (int i = 0; i < n; i++)
     {
         if (arr[i] < 0)
@@ -119,7 +119,7 @@ void sapXepAm0Duong(int arr[], int n)
             temp[index++] = arr[i];
         }
     }
-    // Các s? 0
+    // Các so 0
     for (int i = 0; i < n; i++)
     {
         if (arr[i] == 0)
@@ -127,7 +127,7 @@ void sapXepAm0Duong(int arr[], int n)
             temp[index++] = arr[i];
         }
     }
-    // Các s? duong
+    // Các so duong
     for (int i = 0; i < n; i++)
     {
         if (arr[i] > 0)
@@ -146,7 +146,7 @@ void sapXepNguyenToDau(int arr[], int n)
     int temp[MAX_SIZE];
     int index = 0;
 
-    // Các s? nguyên t?
+    // Các so nguyen to
     for (int i = 0; i < n; i++)
     {
         if (laSoNguyenTo(arr[i]))
@@ -154,7 +154,7 @@ void sapXepNguyenToDau(int arr[], int n)
             temp[index++] = arr[i];
         }
     }
-    // Các s? không ph?i nguyên t?
+    // Các so khong phai nguyên to
     for (int i = 0; i < n; i++)
     {
         if (!laSoNguyenTo(arr[i]))
@@ -173,7 +173,7 @@ void sapXepChanTruocLeSau(int arr[], int n)
     int temp[MAX_SIZE];
     int index = 0;
 
-    // Các s? ch?n
+    // Các so chan
     for (int i = 0; i < n; i++)
     {
         if (arr[i] % 2 == 0)
@@ -181,7 +181,7 @@ void sapXepChanTruocLeSau(int arr[], int n)
             temp[index++] = arr[i];
         }
     }
-    // Các s? l?
+    // Các so le
     for (int i = 0; i < n; i++)
     {
         if (arr[i] % 2 != 0)
@@ -195,7 +195,7 @@ void sapXepChanTruocLeSau(int arr[], int n)
     }
 }
 
-// Giá tr? l?n nh?t (nh? nh?t) c?a dãy s?
+// Giá tri lon nhat (nho nhat) cua dãy so
 int timMax(int arr[], int n)
 {
     int max = arr[0];
@@ -222,7 +222,7 @@ int timMin(int arr[], int n)
     return min;
 }
 
-// Tìm ki?m ph?n t? xi sao cho t?n t?i c?p xj, xk th?a mãn xi = xj + xk
+// Tìm kiem phan tu xi sao cho ton tai cap xj, xk thoa man xi = xj + xk
 bool timXiBangXjCongXk(int arr[], int n)
 {
     for (int i = 0; i < n; i++)
@@ -242,7 +242,7 @@ bool timXiBangXjCongXk(int arr[], int n)
     return false;
 }
 
-// Ð?m ph?n t? x trong dãy
+// Ðem phan tu x trong day
 int demPhanTuX(int arr[], int n, int x, int viTri[])
 {
     int dem = 0;
@@ -256,7 +256,7 @@ int demPhanTuX(int arr[], int n, int x, int viTri[])
     return dem;
 }
 
-// Tìm s? nguyên t? trong dãy
+// Tìm so nguyên to trong dãy
 bool timSoNguyenTo(int arr[], int n, int viTri[], int *soLuong)
 {
     *soLuong = 0;
@@ -270,7 +270,7 @@ bool timSoNguyenTo(int arr[], int n, int viTri[], int *soLuong)
     return (*soLuong > 0);
 }
 
-// Tìm s? chính phuong trong dãy
+// Tìm so chinh phuong trong day
 bool timSoChinhPhuong(int arr[], int n, int viTri[], int *soLuong)
 {
     *soLuong = 0;
@@ -284,7 +284,7 @@ bool timSoChinhPhuong(int arr[], int n, int viTri[], int *soLuong)
     return (*soLuong > 0);
 }
 
-// Chèn ph?n t? vào v? trí k
+// Chèn phan tu vào vi trí k
 void chenPhanTu(int arr[], int *n, int x, int k)
 {
     if (k >= 0 && k <= *n)
@@ -302,7 +302,7 @@ void chenPhanTu(int arr[], int *n, int x, int k)
     }
 }
 
-// Xóa ph?n t? ? v? trí k
+// Xóa phan tu o vi trí k
 void xoaPhanTu(int arr[], int *n, int k)
 {
     if (k >= 0 && k < *n)
@@ -319,7 +319,7 @@ void xoaPhanTu(int arr[], int *n, int k)
     }
 }
 
-// Xóa các ph?n t? có giá tr? giaTri
+// Xóa các phan tu có giá tri giaTri
 void xoaPhanTuGiaTri(int arr[], int *n, int giaTri)
 {
     int i = 0;
@@ -336,7 +336,7 @@ void xoaPhanTuGiaTri(int arr[], int *n, int giaTri)
     }
 }
 
-// Các hàm h? tr?
+// Các hàm ho tro
 bool laSoNguyenTo(int n)
 {
     if (n <= 1)
