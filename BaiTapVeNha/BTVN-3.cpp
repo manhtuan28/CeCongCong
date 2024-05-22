@@ -47,9 +47,9 @@ double SinhVien::tinhtongdiem()
 
 void SinhVien::sapxep(SinhVien arr[], int n)
 {
-    for (int i = 0; i < n - 1; ++i)
+    for (int i = 0; i < n - 1; i++)
     {
-        for (int j = i + 1; j < n; ++j)
+        for (int j = i + 1; j < n; j++)
         {
             if (arr[i].tinhtongdiem() > arr[j].tinhtongdiem())
             {
@@ -69,14 +69,14 @@ int main()
 
     SinhVien *sv = new SinhVien[n];
 
-    for (int i = 0; i < n; ++i)
+    for (int i = 0; i < n; i++)
     {
         cout << "Nhập thông tin sinh viên thứ " << i + 1 << ":" << endl;
         sv[i].nhap();
     }
 
     cout << "\nDanh sách sinh viên trước khi sắp xếp:" << endl;
-    for (int i = 0; i < n; ++i)
+    for (int i = 0; i < n; i++)
     {
         sv[i].xuat();
         cout << endl;
@@ -85,13 +85,11 @@ int main()
     SinhVien::sapxep(sv, n);
 
     cout << "\nDanh sách sinh viên sau khi sắp xếp theo tổng điểm:" << endl;
-    for (int i = 0; i < n; ++i)
+    for (int i = 0; i < n; i++)
     {
         sv[i].xuat();
         cout << endl;
     }
-
-    delete[] sv;
-
+   
     return 0;
 }
