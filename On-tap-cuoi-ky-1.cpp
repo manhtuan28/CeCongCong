@@ -1,4 +1,5 @@
-// By Tuancute
+// Tuancute - ChatGPT 4.0
+
 /* Lớp khách hàng (KhachHang):
 Các thuộc tính: Tên khách, địa chỉ, năm sinh.
 Các phương thức: thiết lập, nhập và hiển thị.
@@ -149,4 +150,4 @@ int main() {
     return 0;
 }
 
-// By Tuancute
+// Tuancute - ChatGPT 4.0
