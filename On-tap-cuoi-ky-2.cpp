@@ -1,3 +1,5 @@
+// Tuancute - ChatGPT 4.0
+
 /* Xây dựng lớp SANPHAM gồm:
 Thuộc tính: tên sản phẩm, giá thành
 Phương thức: hàm nhập và hàm hiển thị
@@ -121,3 +123,5 @@ int main() {
 
     return 0;
 }
+
+// Tuancute - ChatGPT 4.0
