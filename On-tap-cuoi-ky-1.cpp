@@ -81,7 +81,7 @@ public:
     }
 
     float tinhTien() {
-        return soLuong * (giaBan - giamGia) + 0.1f * soLuong * (giaBan - giamGia);
+        return soLuong * (giaBan - giamGia) + 0.1 * soLuong * (giaBan - giamGia);
     }
 
     bool operator<(PhieuBan& pb) {
